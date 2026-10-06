@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Угадай число</title>
+</head>
+<body>
+<script>
+function guessNumber() {
+  const secret = Math.floor(Math.random()*10) + 1;
+  while (true) {
+    const input = prompt("Угадай число от 1 до 10");
+    if (input === null) {
+      break;
+    }
+    const guess = Number(input);
+    if(guess === secret) {
+      alert("Угадал");
+      break;
+    } else if (guess < secret) {
+      alert("Загаданное число больше");
+    } else{
+      alert("Загаданное число меньше");
+    }
+  }
+}
+guessNumber();
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Список учеников</title>
+</head>
+<body>
+<script>
+const students = [
+    {name: "Anna",grade:4},
+    {name: "Ivan",grade:5},
+    {name: "Masha",grade:2},
+    {name:"Kirill",grade:4},
+    {name:"Dima",grade:3},
+];
+function showAbove(minGrade){
+    for (const student of students){
+        if (student.grade >minGrade){
+            console.log(`${student.name}: ${student.grade}`);
+        }
+        }
+    }
+function showBelow(){
+    const total = students.reduce((acc,s)=> acc+s.grade,0);
+    return total/students.length;
+}
+showAbove(3);
+console.log("Средняя оценка:", showBelow().toFixed(2));
+//для результата F5,F12
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Проверка числа</title>
+</head>
+<body>
+<script>
+function checkNumber(number) {
+    let sign;
+    if(number>0) {
+        sign = "положительное";
+    } else if(number<0) {
+        sign = "отрицательное";
+    } else{
+        sign = "ноль";
+    }
+    const parity = number % 2 === 0 ? "чётное" : "нечётное";
+    console.log(`${number}: ${sign}, ${parity}`);
+}
+checkNumber(7);
+checkNumber(-4);
+checkNumber(0);
+//для результата F5,F12
+</script>
+</body>
+</html>

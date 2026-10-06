@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Работа с массивом</title>
+</head>
+<body>
+<script>
+const numbers = [4, 8, 15, 16, 23, 42];
+let sum = 0;
+let max = numbers[0];
+const bigger = [];
+for (let i = 0; i < numbers.length; i++) {
+    sum +=numbers[i];
+    if (numbers[i] > max) {
+        max=numbers[i];
+    }
+    if (numbers[i] > 10) {
+        bigger.push(numbers[i]);
+    }
+}
+console.log("Цикл", sum, max, bigger);
+//для результата F5,F12
+</script>
+</body>
+</html>
